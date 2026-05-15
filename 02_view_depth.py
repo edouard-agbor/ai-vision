@@ -5,6 +5,8 @@
 import cv2
 import numpy as np
 from pyorbbecsdk import Pipeline, Config, OBSensorType, OBFormat
+from datetime import datetime
+from pathlib import Path
 
 
 def frame_to_bgr(frame):
@@ -124,8 +126,14 @@ def main():
             if frame_count % 30 == 0:
                 print(f">>> Frame {frame_count} | Center distance: {distance_m:.2f}m")
 
-            if cv2.waitKey(1) & 0xFF == ord("q"):
+            key = cv2.waitKey(1) & 0xFF
+            if key == ord("q"):
                 break
+            elif key == ord("s"):
+                Path("screenshots").mkdir(exist_ok=True)
+                filename = f"screenshots/depth_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+                cv2.imwrite(filename, combined)
+                print(f">>> Saved: {filename}")
     finally:
         pipeline.stop()
         cv2.destroyAllWindows()
