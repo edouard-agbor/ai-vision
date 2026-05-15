@@ -1,7 +1,10 @@
 # AI Vision
 
-Real-time multimodal perception pipeline running locally on consumer hardware.  
-Foundation work for **IRIS** — a privacy-preserving on-device AI assistant targeting NVIDIA Jetson Orin NX deployment.
+# AI Vision
+
+Real-time depth-camera vision pipeline in Python. Streams color and depth from an Orbbec DaBai DCW2, renders them side-by-side with a colorized depth heat map, and measures the distance to anything in front of the camera in real time.
+
+Built and tested on a Windows PC. The same code runs on any system that supports the Orbbec SDK — including the NVIDIA Jetson Orin NX.
 
 ## Current Stage: 2 of 6 — Color + Depth with Live Distance ✅
 
