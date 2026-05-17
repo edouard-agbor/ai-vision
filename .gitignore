@@ -1,3 +1,17 @@
 venv/ 
 __pycache__/ 
 Log/ 
+
+# YOLO model weights (auto-downloaded on first run)
+*.pt
+
+# Orbbec SDK logs
+Log/
+
+# Python build / caches
+__pycache__/
+*.pyc
+
+# Local scratch files
+New Text Document.txt
+*.tmp
