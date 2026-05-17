@@ -1,10 +1,10 @@
-# AI Vision
+# AI 3D Vision
 
 Real-time depth-camera vision pipeline in Python. Streams color and depth from an Orbbec DaBai DCW2, detects objects with YOLOv8, fuses each detection with aligned depth to compute real-world 3D coordinates, physical dimensions, front-face area, and visible bounding-box volume — all in real time on a Windows PC.
 
 Built and tested on Windows 11. The same code runs on any system that supports the Orbbec SDK, including the NVIDIA Jetson Orin NX if yoou need to deploy on a system or robot.
 
-## Current Stage: 3 of 6 — Object Detection + 3D Measurement ✅
+## Current Stage: 3 of 6 — Object Detection + 3D Measurement 
 
 For each detected object in the live color stream, the system computes:
 
